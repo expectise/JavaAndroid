@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="login"
+        type="com.multiventas.app.dto.Login" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/constrain">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.MainActivity">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_marginTop="140dp"
+            android:hint="E-Mail"
+            android:inputType="textEmailAddress"
+            style="@style/loginField"/>
+
+        <EditText
+            android:id="@+id/contrasena"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            style="@style/loginField"/>
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresar"
+            style="@style/mainButton"/>
+
+        <TextView
+            android:id="@+id/leyenda"
+            android:text="¿Aún no estás registrado?"
+            style="@style/mainTextViewBlack"/>
+
+        <TextView
+            android:id="@+id/btnregistrate"
+            android:text="Regístrate aquí"
+            style="@style/mainTextViewRed"/>
+
+        <TextView
+            android:id="@+id/recordar"
+            android:text="Recuperar Contraseña"
+            android:layout_marginBottom="30dp"
+            style="@style/mainTextViewBlack" />
+
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

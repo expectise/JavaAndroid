@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.Recuperar2Activity">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/regresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Regresar" />
+        <TextView
+            android:id="@+id/leyenda"
+            android:layout_marginTop="140dp"
+            android:text="Por favor ingresa el código de 6 caracteres que se envió a tu correo"
+            style="@style/mainTextViewBlack"/>
+
+        <EditText
+            android:id="@+id/confirmacion"
+            android:hint="XXXXXX"
+            android:inputType="text"
+            android:maxLength="6"
+            style="@style/confirmaField" />
+
+
+
+        <Button
+            android:id="@+id/siguiente"
+            android:text="Recuperar"
+            style="@style/buttonConfirma"/>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.AdminUsuarioSelectActivity">
+
+
+        <EditText
+            android:id="@+id/nickNameSearch"
+            android:hint="Buscar por NickName"
+            style="@style/articuloSearchField"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/nickname"
+                style="@style/articuloRecycledLandscape"
+                android:textColor="@color/red"
+                android:text="Nick Name"/>
+
+            <TextView
+                android:id="@+id/nombres"
+                style="@style/articuloRecycledLandscape"
+                android:textColor="@color/red"
+                android:text="Nombres"/>
+
+            <TextView
+                android:id="@+id/email"
+                style="@style/articuloRecycledLandscape"
+                android:textColor="@color/red"
+                android:text="E-Mail"/>
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/usuarios_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/usuarios_list_item"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                tools:context=".activity.PaisAdminActivity">
+
+
+
+                <EditText
+                    android:id="@+id/pais"
+                    style="@style/articuloField"
+                    android:hint="País"/>
+
+                <EditText
+                    android:id="@+id/valorEnvio"
+                    style="@style/articuloField"
+                    android:hint="Valor de Envío"
+                    android:inputType="numberDecimal"/>
+
+                <EditText
+                    android:id="@+id/precioExcento"
+                    style="@style/articuloField"
+                    android:hint="Precio Excento"
+                    android:inputType="numberDecimal"/>
+
+            </GridLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:context=".activity.PaisAdminActivity">
+                <TextView
+                    android:id="@+id/creado"
+                    style="@style/fechaText"/>
+
+                <TextView
+                    android:id="@+id/actualizado"
+                    style="@style/fechaText"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/guardar"
+                style="@style/buttonRegister"
+                android:text="Guardar" />
+
+            <TextView
+                android:id="@+id/eliminar"
+                android:text="Eliminar"
+                style="@style/eliminarButton" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

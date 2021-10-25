@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.ConfirmaActivity">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/Mensaje"
+            android:layout_marginTop="100dp"
+            android:text="Se ha enviado un código de 4 digitos a su correo, por favor ingresarlo en el campo siguiente"
+            style="@style/mainTextViewBlack"/>
+
+        <EditText
+            android:id="@+id/confirmacion"
+            android:hint="XXXX"
+            android:inputType="number"
+            android:maxLength="4"
+            style="@style/confirmaField"/>
+
+        <Button
+            android:id="@+id/confirmar"
+            android:text="Confirmar"
+            style="@style/buttonConfirma"/>
+    </LinearLayout>
+</layout>

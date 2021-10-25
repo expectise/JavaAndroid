@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.AdminPujasActivity">
+
+
+        <Button
+            android:id="@+id/Cerrarpuja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Cerrar Puja" />
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:columnCount="2">
+                    <EditText
+                        android:id="@+id/fecPriAbo"
+                        android:visibility="gone"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Fecha Primer Abono"
+                        style="@style/fechaField"/>
+                    <EditText
+                        android:id="@+id/tituloPuja"
+                        android:visibility="gone"
+                        android:hint="Título de la Puja"
+                        style="@style/articuloField"/>
+                </GridLayout>
+        <Button
+            android:id="@+id/Abrirpuja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Abrir Puja" />
+
+        <Button
+            android:id="@+id/Asignar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Asignar productos" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:columnCount="2">
+            <EditText
+                android:id="@+id/pujaIni"
+                android:visibility="gone"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Filtrar Desde"
+                style="@style/fechaField"/>
+            <EditText
+                android:id="@+id/pujaFin"
+                android:visibility="gone"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Filtrar Hasta"
+                style="@style/fechaField"/>
+        </GridLayout>
+        <Button
+            android:id="@+id/pujas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Mis Pujas" />
+
+
+    </LinearLayout>
+</layout>

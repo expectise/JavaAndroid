@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="register"
+        type="com.multiventas.app.dto.Register" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/constrain">
+
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+
+            <LinearLayout
+                android:id="@+id/subconstrain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".activity.RegisterActivity">
+
+                <Button
+                    android:id="@+id/regresar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Regresar" />
+
+                <EditText
+                    android:id="@+id/nickname"
+                    android:hint="NickName en FaceBook"
+                    android:text="@{register.nickname}"
+                    style="@style/registerField" />
+
+                <EditText
+                    android:id="@+id/nombres"
+                    android:hint="Nombre(s)"
+                    android:inputType="textPersonName"
+                    android:text="@{register.nombre}"
+                    style="@style/registerField" />
+
+                <EditText
+                    android:id="@+id/appaterno"
+                    android:hint="Apellido Paterno"
+                    android:text="@{register.appaterno}"
+                    android:inputType="textPersonName"
+                    style="@style/registerField" />
+
+                <EditText
+                    android:id="@+id/apmaterno"
+                    android:gravity="center"
+                    android:hint="Apellido Materno"
+                    android:text="@{register.apmaterno}"
+                    android:inputType="textPersonName"
+                    style="@style/registerField" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:hint="E-Mail"
+                    android:text="@{register.email}"
+                    android:inputType="textEmailAddress"
+                    style="@style/registerField" />
+
+
+                <EditText
+                    android:id="@+id/contrasena"
+                    android:hint="Contraseña"
+                    android:text="@{register.contrasena}"
+                    android:inputType="textPassword"
+                    style="@style/registerField" />
+
+                <EditText
+                    android:id="@+id/contrasenaConfirm"
+                    android:text="@{register.confcontrasena}"
+                    android:hint="Confirmar contraseña"
+                    android:inputType="textPassword"
+                    style="@style/registerField" />
+
+                <EditText
+                    android:id="@+id/telefono"
+                    android:text="@{register.telefono}"
+                    android:hint="Teléfono"
+                    android:inputType="phone"
+                    style="@style/registerField" />
+
+                <Button
+                    android:id="@+id/registrarse"
+                    android:text="Registrarme"
+                    style="@style/buttonRegister"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

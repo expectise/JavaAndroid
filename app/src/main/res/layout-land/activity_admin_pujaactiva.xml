@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.AdminPujaactivaActivity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/nickNameHeader"
+                style="@style/articuloRecycledLandscape"
+                android:textColor="@color/red"
+                android:text="Nick Name"/>
+
+            <TextView
+                android:id="@+id/tituloProductoHeader"
+                style="@style/articuloRecycledLandscape"
+                android:textColor="@color/red"
+                android:text="Titulo de Producto"/>
+
+            <TextView
+                android:id="@+id/codigoProductoHeader"
+                style="@style/articuloRecycledLandscape"
+                android:textColor="@color/red"
+                android:text="Código de Producto"/>
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pujaactiva_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/puja_activa_list_item"/>
+    </LinearLayout>
+</layout>
